@@ -72,8 +72,9 @@ Exception in thread "main" java.lang.AssertionError: Not safe at all
 
 **第二种形式和第一种的区别在于后者可以指定错误信息。**
 
+##### 注意
 
-**断言只是为了用来调试程序，切勿将断言写入业务逻辑中。比如考虑下面这个简单的例子：**
+断言只是为了用来调试程序，切勿将断言写入业务逻辑中。比如考虑下面这个简单的例子：
 
 ```
 public class AssertionTest {  
