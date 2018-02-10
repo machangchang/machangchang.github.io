@@ -20,7 +20,7 @@ Java SE 从1.4版本开始增加了断言(assert)的特性。
 - 1.assert <bool expression>;  比如     boolean isStudent = false; assert isStudent;
 - 2.assert <bool expression> : <message>;    比如  boolean isSafe = false;  assert isSafe : "Not Safe at all";
 
-##### 第一种形式：
+#### 第一种形式：
 
 ```
 public class AssertionTest {  
@@ -49,7 +49,7 @@ Exception in thread "main" java.lang.AssertionError
     at AssertionTest.main(AssertionTest.java:8)  
 ```
 
-##### 第二种形式
+#### 第二种形式
 
 ```
 public class AssertionTest {  
@@ -72,7 +72,7 @@ Exception in thread "main" java.lang.AssertionError: Not safe at all
 
 **第二种形式和第一种的区别在于后者可以指定错误信息。**
 
-##### 注意
+#### 注意
 
 断言只是为了用来调试程序，切勿将断言写入业务逻辑中。比如考虑下面这个简单的例子：
 
