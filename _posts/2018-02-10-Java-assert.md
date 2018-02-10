@@ -70,7 +70,7 @@ Exception in thread "main" java.lang.AssertionError: Not safe at all
     at AssertionTest.main(AssertionTest.java:7)  
 ```
 
-**第二种形式和第一种的区别在于后者可以指定错误信息。**
+*第二种形式和第一种的区别在于后者可以指定错误信息*
 
 #### 注意
 
