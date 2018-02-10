@@ -77,7 +77,7 @@ collections:
         output: true
         permalink: /wiki/:path/
 
-repository: mzlogin/mzlogin.github.io
+repository: machangchang/machangchang.github.io
 
 # ---------------- #
 #      Comments    #
@@ -87,21 +87,21 @@ comments_provider: gitalk
 # !!!重要!!! 请修改下面这些信息为你自己申请的
 # !!!Important!!! Please modify infos below to yours
 # https://disqus.com
-disqus:
-    username: 
+#disqus:
+#    username: 
 # https://imsun.net/posts/gitment-introduction/
-gitment:
-    owner: mzlogin
-    repo: blog-comments
-    oauth:
-        client_id: d2e1cbbd298958076462
-        client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
+#gitment:
+#    owner: mzlogin
+#    repo: blog-comments
+#    oauth:
+#        client_id: d2e1cbbd298958076462
+ #       client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
 # https://github.com/gitalk/gitalk#install
 gitalk:
-    owner: mzlogin
+    owner: machangchang
     repo: blog-comments
-    clientID: d2e1cbbd298958076462
-    clientSecret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
+    clientID: ed95eff8f433d530d234
+    clientSecret: 4daf50d9fc926cef23ad1f258ee54774702589cf
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : false
 
