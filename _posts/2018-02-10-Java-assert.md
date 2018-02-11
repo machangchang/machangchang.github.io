@@ -2,10 +2,9 @@
 layout: post
 title: Java assert
 categories: Java
-description: Java assert。
+description: Java assert
 keywords: Java, assert
 ---
-
 
 Java SE 从1.4版本开始增加了断言(assert)的特性。
 
