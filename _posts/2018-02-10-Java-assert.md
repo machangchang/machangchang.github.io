@@ -22,7 +22,7 @@ Java SE 从1.4版本开始增加了断言(assert)的特性。
 #### 第一种形式：
 
 ```java
-public class AssertionTest {  
+public class AssertionTest { 
   
     public static void main(String[] args) {  
           
