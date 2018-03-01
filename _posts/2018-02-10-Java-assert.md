@@ -21,8 +21,8 @@ Java SE 从1.4版本开始增加了断言(assert)的特性。
 
 #### 第一种形式：
 
-```
-public class AssertionTest {  
+```java
+public class AssertionTest {  
   
     public static void main(String[] args) {  
           
@@ -50,7 +50,7 @@ Exception in thread "main" java.lang.AssertionError
 
 #### 第二种形式
 
-```
+```java
 public class AssertionTest {  
   
     public static void main(String[] args) {  
@@ -75,7 +75,7 @@ Exception in thread "main" java.lang.AssertionError: Not safe at all
 
 断言只是为了用来调试程序，切勿将断言写入业务逻辑中。比如考虑下面这个简单的例子：
 
-```
+```java
 public class AssertionTest {  
   
     public static void main(String[] args) {  
