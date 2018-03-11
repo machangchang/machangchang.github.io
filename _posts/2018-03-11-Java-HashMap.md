@@ -121,7 +121,7 @@ HashMap 一共提供了四个构造函数，其中 默认无参的构造函数 �
 
 在Java中最常用的两种结构是数组和模拟指针(引用)，几乎所有的数据结构都可以利用这两种来组合实现，HashMap也是如此。实际上HashMap是一个“链表散列”，如下是它数据结构：
 
-![](https://images0.cnblogs.com/blog/381060/201401/152128347367.png)
+![](/images/blog/2018-03-11/Java-HashMap-001.png)
 
 从上图我们可以看出HashMap底层实现还是数组，只是数组的每一项都是一条链。其中参数initialCapacity就代表了该数组的长度。下面为HashMap构造函数的源码：
 
