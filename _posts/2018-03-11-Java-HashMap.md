@@ -8,7 +8,7 @@ keywords: Java, HashMap
 
 ## Java HashMap
 
-HashMap也是我们使用非常多的Collection，它是基于哈希表的 Map 接口的实现，以key-value的形式存在。在HashMap中，key-value总是会当做一个整体来处理，系统会根据hash算法来来计算key-value的存储位置，我们总是可以通过key快速地存、取value。下面就来分析HashMap的存取。
+HashMap也是我们使用非常多的Collection，它是基于哈希表的 Map 接口的实现，以key-value的形式存在。在HashMap中，key-value总是会当做一个整体来处理，系统会根据hash算法来来计算key-value的存储位置，我们总是可以通过key快速地存、取value。下面就来分析HashMap的存取。接下来讲的是基于java1.6，1.6和1.7相差不大，但1.8对HashMap底层的实现进行了优化，例如引入红黑树的数据结构和扩容的优化等，所以后文会比较1.6,1.7和1.8的区别。
 
 ### 1. 定义
 
