@@ -6,7 +6,7 @@ description: Java HashMap
 keywords: Java, HashMap
 ---
 
-## Java HashMap
+## Java HashMap（JDK 1.6）
 
 HashMap也是我们使用非常多的Collection，它是基于哈希表的 Map 接口的实现，以key-value的形式存在。在HashMap中，key-value总是会当做一个整体来处理，系统会根据hash算法来来计算key-value的存储位置，我们总是可以通过key快速地存、取value。下面就来分析HashMap的存取。接下来讲的是基于java1.6，1.6和1.7相差不大，但1.8对HashMap底层的实现进行了优化，例如引入红黑树的数据结构和扩容的优化等，所以后文会比较1.6,1.7和1.8的区别。
 
@@ -285,3 +285,5 @@ public V get(Object key) {
 ```
 
 在这里能够根据key快速的取到value除了和HashMap的数据结构密不可分外，还和Entry有莫大的关系，在前面就提到过，HashMap在存储过程中并没有将key，value分开来存储，而是当做一个整体key-value来处理的，这个整体就是Entry对象。同时value也只相当于key的附属而已。在存储的过程中，系统根据key的hashcode来决定Entry在table数组中的存储位置，在取的过程中同样根据key的hashcode取出相对应的Entry对象。
+
+## Java HashMap（JDK 1.8）
