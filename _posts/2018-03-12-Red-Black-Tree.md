@@ -140,3 +140,6 @@ keywords: Red-Black-Tree
 
 ![](/images/blog/2018-03-12-Red-Black-Tree/Red_Black_Tree_018.jpg)
 
+> 参考链接：https://zhuanlan.zhihu.com/p/31805309
+http://www.cnblogs.com/CarpenterLee/p/5503882.html
+
