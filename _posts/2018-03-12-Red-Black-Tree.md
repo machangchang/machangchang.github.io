@@ -118,13 +118,13 @@ keywords: Red-Black-Tree
 
 逆时针旋转红黑树的两个节点，使得父节点被自己的右孩子取代，而自己成为自己的左孩子。说起来很怪异，大家看下图：
 
-![](/images/blog/2018-03-12-Red-Black-Tree/Red_Black_Tree_014.jpg)
+![](/images/blog/2018-03-12-Red-Black-Tree/Red_Black_Tree_014.png)
 
 右旋转：
 
 顺时针旋转红黑树的两个节点，使得父节点被自己的左孩子取代，而自己成为自己的右孩子。大家看下图：
 
-![](/images/blog/2018-03-12-Red-Black-Tree/Red_Black_Tree_015.jpg)
+![](/images/blog/2018-03-12-Red-Black-Tree/Red_Black_Tree_015.png)
 
 红黑树的插入和删除包含很多种情况，每一种情况都有不同的处理方式，在这里举一个典型例子。
 
