@@ -12,7 +12,7 @@ keywords: HashMap Hashtable
 
 HashTable基于Dictionary类，而HashMap是基于AbstractMap。Dictionary是什么？它是任何可将键映射到相应值的类的抽象父类，而AbstractMap是基于Map接口的骨干实现，它以最大限度地减少实现此接口所需的工作。
 
-###（二）
+### （二）
 
 HashMap可以允许存在一个为null的key和任意个为null的value，但是HashTable中的key和value都不允许为null。
 
@@ -20,7 +20,7 @@ HashMap可以允许存在一个为null的key和任意个为null的value，但是
 
 Hashtable的方法是同步的，HashMap未经同步，所以在多线程场合要手动同步HashMap，这个区别就像Vector和ArrayList一样。
 
-###（四）
+### （四）
 
 哈希值的使用不同，Hashtable直接使用对象的hashCode，而HashMap重新计算hash值，而且用与代替求模。
 
