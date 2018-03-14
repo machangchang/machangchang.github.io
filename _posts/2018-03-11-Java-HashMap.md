@@ -287,3 +287,5 @@ public V get(Object key) {
 在这里能够根据key快速的取到value除了和HashMap的数据结构密不可分外，还和Entry有莫大的关系，在前面就提到过，HashMap在存储过程中并没有将key，value分开来存储，而是当做一个整体key-value来处理的，这个整体就是Entry对象。同时value也只相当于key的附属而已。在存储的过程中，系统根据key的hashcode来决定Entry在table数组中的存储位置，在取的过程中同样根据key的hashcode取出相对应的Entry对象。
 
 ## Java HashMap（JDK 1.8）
+
+> 参考链接：http://www.cnblogs.com/chenssy/p/3521565.html
