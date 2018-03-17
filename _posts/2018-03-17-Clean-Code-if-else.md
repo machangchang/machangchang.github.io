@@ -6,8 +6,6 @@ description: Java Clean Code
 keywords: Java, Clean Code
 ---
 
-## 代码简洁之道：用多态替代条件语句
-
 大部分的条件语句是可以用多态代替的。
 
 
@@ -192,3 +190,5 @@ class Factory {
 ### 总结
 
 **该用条件语句的时候不要强行用多态。**
+
+> 参考链接：http://blog.xiaohansong.com/2015/11/24/clean-code-polymorphism/#
