@@ -12,7 +12,11 @@ ConcurrentHashMap是J.U.C(java.util.concurrent包)的重要成员，它是HashMa
 
 本文所有关于 ConcurrentHashMap 的源码都是基于 JDK 1.6 的，不同 JDK 版本之间会有些许差异，但不影响我们对 ConcurrentHashMap 的数据结构、原理等整体的把握和了解。
 
-HashMap 是 Java Collection Framework 的重要成员，也是Map族(如下图所示)中我们最为常用的一种。不过遗憾的是，HashMap不是线程安全的。也就是说，在多线程环境下，操作HashMap会导致各种各样的线程安全问题，比如在HashMap扩容重哈希时出现的死循环问题，脏读问题等。HashMap的这一缺点往往会造成诸多不便，虽然在并发场景下HashTable和由同步包装器包装的HashMap(Collections.synchronizedMap(Map<K,V> m) )可以代替HashMap，但是它们都是通过使用一个全局的锁来同步不同线程间的并发访问，因此会带来不可忽视的性能问题。庆幸的是，JDK为我们解决了这个问题，它为HashMap提供了一个线程安全的高效版本 —— ConcurrentHashMap。在ConcurrentHashMap中，无论是读操作还是写操作都能保证很高的性能：在进行读操作时(几乎)不需要加锁，而在写操作时通过锁分段技术只对所操作的段加锁而不影响客户端对其它段的访问。特别地，在理想状态下，ConcurrentHashMap 可以支持 16 个线程执行并发写操作（如果并发级别设为16），及任意数量线程的读操作。
+HashMap 是 Java Collection Framework 的重要成员，也是Map族(如下图所示)中我们最为常用的一种。不过遗憾的是，HashMap不是线程安全的。也就是说，在多线程环境下，操作HashMap会导致各种各样的线程安全问题，比如在HashMap扩容重哈希时出现的死循环问题，脏读问题等。
+
+HashMap的这一缺点往往会造成诸多不便，虽然在并发场景下HashTable和由同步包装器包装的HashMap(Collections.synchronizedMap(Map<K,V> m) )可以代替HashMap，但是它们都是通过使用一个全局的锁来同步不同线程间的并发访问，因此会带来不可忽视的性能问题。庆幸的是，JDK为我们解决了这个问题，它为HashMap提供了一个线程安全的高效版本 —— ConcurrentHashMap。
+
+在ConcurrentHashMap中，无论是读操作还是写操作都能保证很高的性能：在进行读操作时(几乎)不需要加锁，而在写操作时通过锁分段技术只对所操作的段加锁而不影响客户端对其它段的访问。特别地，在理想状态下，ConcurrentHashMap 可以支持 16 个线程执行并发写操作（如果并发级别设为16），及任意数量线程的读操作。
 
 如下图所示，ConcurrentHashMap本质上是一个Segment数组，而一个Segment实例又包含若干个桶，每个桶中都包含一条由若干个 HashEntry 对象链接起来的链表。总的来说，ConcurrentHashMap的高效并发机制是通过以下三方面来保证的(具体细节见后文阐述)：
 
