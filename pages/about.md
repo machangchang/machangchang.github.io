@@ -8,15 +8,15 @@ menu: 关于
 permalink: /about/
 ---
 
-Behind every great fortune there is acrime.——BALZAC
+**Behind every great fortune there is acrime.——BALZAC**
 
-*联系
+## 联系
 
 {% for website in site.data.social %}
 * {{ website.sitename }}：[@{{ website.name }}]({{ website.url }})
 {% endfor %}
 
-*Skill Keywords
+## Skill Keywords
 
 {% for category in site.data.skills %}
 ### {{ category.name }}
