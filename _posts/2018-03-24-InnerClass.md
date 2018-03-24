@@ -622,4 +622,5 @@ class InheritInner extends WithInner.Inner {
 ```
 
 > 参考链接：https://www.cnblogs.com/dolphin0520/p/3811445.html
+
 > 声明：本站采用开放的[知识共享署名-非商业性使用-相同方式共享 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)进行许可。
