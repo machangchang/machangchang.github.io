@@ -8,7 +8,7 @@ menu: 关于
 permalink: /about/
 ---
 
-人生总是会遇到很多挫折的。
+Behind every great fortune there is acrime.——BALZAC
 
 ## 联系
 
