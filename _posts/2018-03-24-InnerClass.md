@@ -209,6 +209,126 @@ class Listener2 implements View.OnClickListener{
 
 匿名内部类是唯一一种没有构造器的类。正因为其没有构造器，所以匿名内部类的使用范围非常有限，大部分匿名内部类用于接口回调。匿名内部类在编译的时候由系统自动起名为Outter$1.class。一般来说，匿名内部类用于继承其他类或是实现接口，并不需要增加额外的方法，只是对继承方法的实现或是重写。
 
+使用匿名内部类的前提条件：必须继承一个父类或实现一个接口。
+
+**实例1:** 不使用匿名内部类来实现抽象方法
+
+```java
+abstract class Person {
+    public abstract void eat();
+}
+ 
+class Child extends Person {
+    public void eat() {
+        System.out.println("eat something");
+    }
+}
+ 
+public class Demo {
+    public static void main(String[] args) {
+        Person p = new Child();
+        p.eat();
+    }
+}
+```
+
+**运行结果：** eat something
+
+可以看到，我们用Child继承了Person类，然后实现了Child的一个实例，将其向上转型为Person类的引用
+
+但是，如果此处的Child类只使用一次，那么将其编写为独立的一个类岂不是很麻烦？
+
+这个时候就引入了匿名内部类。
+
+```java
+abstract class Person {
+    public abstract void eat();
+}
+ 
+public class Demo {
+    public static void main(String[] args) {
+        Person p = new Person() {
+            public void eat() {
+                System.out.println("eat something");
+            }
+        };
+        p.eat();
+    }
+}
+```
+
+**运行结果：** eat something
+
+可以看到，我们直接将抽象类Person中的方法在大括号中实现了。
+
+这样便可以省略一个类的书写。
+
+并且，匿名内部类还能用于接口上。
+
+**实例3：** 在接口上使用匿名内部类
+
+```java
+interface Person {
+    public void eat();
+}
+ 
+public class Demo {
+    public static void main(String[] args) {
+        Person p = new Person() {
+            public void eat() {
+                System.out.println("eat something");
+            }
+        };
+        p.eat();
+    }
+}
+```
+
+**运行结果：** eat something
+
+由上面的例子可以看出，只要一个类是抽象的或是一个接口，那么其子类中的方法都可以使用匿名内部类来实现。
+
+最常用的情况就是在多线程的实现上，因为要实现多线程必须继承Thread类或是继承Runnable接口。
+
+**实例4：** Thread类的匿名内部类实现
+
+```java
+public class Demo {
+    public static void main(String[] args) {
+        Thread t = new Thread() {
+            public void run() {
+                for (int i = 1; i <= 5; i++) {
+                    System.out.print(i + " ");
+                }
+            }
+        };
+        t.start();
+    }
+}
+```
+
+**运行结果：** 1 2 3 4 5
+
+**实例5：** Runnable接口的匿名内部类实现
+
+```java
+public class Demo {
+    public static void main(String[] args) {
+        Runnable r = new Runnable() {
+            public void run() {
+                for (int i = 1; i <= 5; i++) {
+                    System.out.print(i + " ");
+                }
+            }
+        };
+        Thread t = new Thread(r);
+        t.start();
+    }
+}
+```
+
+**运行结果：** 1 2 3 4 5
+
 ### 4. 静态内部类
 
 静态内部类也是定义在另一个类里面的类，只不过在类的前面多了一个关键字static。静态内部类是不需要依赖于外部类的，这点和类的静态成员属性有点类似，并且它不能使用外部类的非static成员变量或者方法，这点很好理解，因为在没有外部类的对象的情况下，可以创建静态内部类的对象，如果允许访问外部类的非static成员就会产生矛盾，因为外部类的非static成员必须依附于具体的对象。
