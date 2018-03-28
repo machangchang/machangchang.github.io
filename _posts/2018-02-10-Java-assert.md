@@ -93,3 +93,4 @@ Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
     at AssertionTest.main(AssertionTest.java:7)  
 ```
 
+> 声明：本站采用开放的[知识共享署名-非商业性使用-相同方式共享 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)进行许可。
