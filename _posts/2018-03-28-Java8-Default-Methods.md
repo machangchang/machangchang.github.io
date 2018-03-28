@@ -347,3 +347,4 @@ public class Test {
 * 接口中的静态方法必须是 public 的，public 修饰符可以省略，static 修饰符不能省略。
 * 即使使用了 java 8 的环境，一些 IDE 仍然可能在一些代码的实时编译提示时出现异常的提示（例如无法发现 java 8 的语法错误），因此不要过度依赖 IDE。
 
+> 声明：本站采用开放的[知识共享署名-非商业性使用-相同方式共享 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)进行许可。
