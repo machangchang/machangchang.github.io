@@ -10,7 +10,7 @@ keywords: 并发
 
 在java中如果要创建线程的话，一般有两种方式：1）继承Thread类；2）实现Runnable接口。
 
-### 1.继承Thread类
+### 1. 继承Thread类
 
 继承Thread类的话，必须重写run方法，在run方法中定义需要执行的任务。
 
@@ -94,7 +94,7 @@ name:thread1 子线程ID:9
 
 　　2）虽然thread1的start方法调用在thread2的run方法前面调用，但是先输出的是thread2的run方法调用的相关信息，说明新线程创建的过程不会阻塞主线程的后续执行。
 
-### 实现Runnable接口
+### 2. 实现Runnable接口
 
 在Java中创建线程除了继承Thread类之外，还可以通过实现Runnable接口来实现类似的功能。实现Runnable接口必须重写其run方法。
 
