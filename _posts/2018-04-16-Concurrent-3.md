@@ -373,17 +373,17 @@ destroy方法也是废弃的方法。基本不会被使用到。
 
 1）getId
 
-　　用来得到线程ID
+用来得到线程ID
 
-　　2）getName和setName
+2）getName和setName
 
-　　用来得到或者设置线程名称。
+用来得到或者设置线程名称。
 
-　　3）getPriority和setPriority
+3）getPriority和setPriority
 
-　　用来获取和设置线程优先级。
+用来获取和设置线程优先级。
 
-　　4）setDaemon和isDaemon
+4）setDaemon和isDaemon
 
 用来设置线程是否成为守护线程和判断线程是否是守护线程。
 
