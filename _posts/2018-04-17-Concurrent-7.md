@@ -46,9 +46,9 @@ Collections类是一个工具提供类，注意，它和Collection不同，Colle
 
 ## 三.同步容器的缺陷
 
-1. 从同步容器的具体实现源码可知，同步容器中的方法采用了synchronized进行了同步，那么很显然，这必然会影响到执行性能。
+1.**从同步容器的具体实现源码可知，同步容器中的方法采用了synchronized进行了同步，那么很显然，这必然会影响到执行性能。**
 
-2. 同步容器真的是安全的吗？
+2.**同步容器真的是安全的吗？**
 
 也有有人认为Vector中的方法都进行了同步处理，那么一定就是线程安全的，事实上这可不一定。看下面这段代码：
 
@@ -151,7 +151,7 @@ public class Test {
 }
 ```
 
-3. ConcurrentModificationException异常
+3.**ConcurrentModificationException异常**
 
 在对Vector等容器并发地进行迭代修改时，会报ConcurrentModificationException异常，关于这个异常将会在后续文章中讲述。
 
