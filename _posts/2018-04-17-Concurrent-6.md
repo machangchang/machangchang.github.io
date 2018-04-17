@@ -245,6 +245,32 @@ protected T initialValue() {
 
 可以看出，如果不设置ThreadLocal的数值，默认就是null。
 
+## 适用场景
+
+**下面这段话引用自官方源码注释：**
+
+> This class provides thread-local variables. These variables differ from their normal counterparts in that each thread that accesses one (via its get or set method) has its own, independently initialized copy of the variable. ThreadLocal instances are typically private static fields in classes that wish to associate state with a thread (e.g., a user ID or Transaction ID).
+
+>Each thread holds an implicit reference to its copy of a thread-local variable as long as the thread is alive and the ThreadLocal instance is accessible; after a thread goes away, all of its copies of thread-local instances are subject to garbage collection (unless other references to these copies exist).
+
+**大意：**
+
+> ThreadLocal 提供了线程本地的实例。它与普通变量的区别在于，每个使用该变量的线程都会初始化一个完全独立的实例副本。ThreadLocal 变量通常被private static修饰。当一个线程结束时，它所使用的所有 ThreadLocal 相对的实例副本都可被回收。
+
+总的来说，ThreadLocal 适用于每个线程需要自己独立的实例且该实例需要在多个方法中被使用，也即变量在线程间隔离而在方法或类间共享的场景。
+
+* 每个线程需要有自己单独的实例
+
+* 实例需要在多个方法中共享，但不希望被多线程共享
+
+**最常见的ThreadLocal使用场景为 用来解决 数据库连接、Session管理等。**
+
 > 参考链接：https://allenwu.itscoder.com/threadlocal-source
+
+> http://www.cnblogs.com/dolphin0520/p/3920407.html
+
+> http://www.jasongj.com/java/threadlocal/
+
+> https://droidyue.com/blog/2016/03/13/learning-threadlocal-in-java/
 
 > 声明：本站采用开放的[知识共享署名-非商业性使用-相同方式共享 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)进行许可。
