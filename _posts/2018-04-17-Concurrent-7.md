@@ -34,13 +34,13 @@ List、Set、Queue接口分别继承了Collection接口，Map本身是一个接�
 
 　　2）Collections类中提供的静态工厂方法创建的类
 
-　　Vector实现了List接口，Vector实际上就是一个数组，和ArrayList类似，但是Vector中的方法都是synchronized方法，即进行了同步措施。
+Vector实现了List接口，Vector实际上就是一个数组，和ArrayList类似，但是Vector中的方法都是synchronized方法，即进行了同步措施。
 
-　　Stack也是一个同步容器，它的方法也用synchronized进行了同步，它实际上是继承于Vector类。
+Stack也是一个同步容器，它的方法也用synchronized进行了同步，它实际上是继承于Vector类。
 
-　　HashTable实现了Map接口，它和HashMap很相似，但是HashTable进行了同步处理，而HashMap没有。
+HashTable实现了Map接口，它和HashMap很相似，但是HashTable进行了同步处理，而HashMap没有。
 
-　　Collections类是一个工具提供类，注意，它和Collection不同，Collection是一个顶层的接口。在Collections类中提供了大量的方法，比如对集合或者容器进行排序、查找等操作。最重要的是，在它里面提供了几个静态工厂方法来创建同步容器类，如下图所示：
+Collections类是一个工具提供类，注意，它和Collection不同，Collection是一个顶层的接口。在Collections类中提供了大量的方法，比如对集合或者容器进行排序、查找等操作。最重要的是，在它里面提供了几个静态工厂方法来创建同步容器类，如下图所示：
 
 ![](/images/blog/2018-04-17-Concurrent-7/Concurrent_7_001.jpg)
 
