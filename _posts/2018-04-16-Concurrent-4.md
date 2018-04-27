@@ -332,6 +332,51 @@ public class InsertData {
 
 有一点要注意：**对于synchronized方法或者synchronized代码块，当出现异常时，JVM会自动释放当前线程占用的锁，因此不会由于异常导致出现死锁现象。**
 
+## 类锁
+
+其实Java中的主要分为对象锁和类锁，上面主要讲了对象锁的使用，接下来讲下类锁。
+
+由于一个类不论被实例化多少次，其中的静态方法和静态变量在内存中都只有一份。所以，一旦一个静态的方法被申明为synchronized。调用此方法的线程共用同一把锁，我们称之为类锁。
+
+对象锁是用来控制实例方法之间的同步，类锁是用来控制静态方法（或静态变量互斥体）之间的同步。类锁只是一个概念上的东西，并不是真实存在的，它只是用来帮助我们理解锁定实例方法和静态方法的区别的。ava类可能会有很多个对象，但是只有1个Class对象，也就是说类的不同实例之间共享该类的Class对象。Class对象其实也仅仅是1个Java对象，只不过有点特殊而已。由于每个Java对象都有1个互斥锁，而类的静态方法是需要Class对象。所以所谓的类锁，不过是Class对象的锁而已。
+
+```java
+public class Test
+{
+　　 // 类锁：形式1
+    public static synchronized void Method1()
+    {
+        System.out.println(＂我是类锁一号＂);
+        try
+        {
+            Thread.sleep(500);
+        } catch (InterruptedException e)
+        {
+            e.printStackTrace();
+        }
+       
+    }
+ 
+    // 类锁：形式2
+    public void Method２()
+    {
+        synchronized (Test.class)
+        {
+            System.out.println(＂我是类锁二号＂);
+            try
+            {
+                Thread.sleep(500);
+            } catch (InterruptedException e)
+            {
+                e.printStackTrace();
+            }
+          
+        }
+ 
+    }
+｝
+```
+
 > 参考资料：http://www.cnblogs.com/dolphin0520/p/3923737.html
 
 > 声明：本站采用开放的[知识共享署名-非商业性使用-相同方式共享 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)进行许可。
