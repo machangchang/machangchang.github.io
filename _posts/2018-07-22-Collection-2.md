@@ -36,7 +36,7 @@ Collection接口的所有子类(直接子类和间接子类)都必须实现2种�
 
 下面是Collection的API。
 
-```
+```java
 abstract boolean         add(E object)
 abstract boolean         addAll(Collection<? extends E> collection)
 abstract void            clear()
@@ -64,7 +64,7 @@ List是一个继承于Collection的接口，即List是**集合**中的一种。L
 
 关于API方面。既然List是继承于Collection接口，它自然就包含了Collection中的全部函数接口；由于List是有序队列，它也额外的有自己的API接口。主要有“添加、删除、获取、修改指定位置的元素”、“获取List中的子队列”等。
 
-```
+```java
 abstract boolean         add(E object)
 abstract boolean         addAll(Collection<? extends E> collection)
 abstract void            clear()
@@ -163,7 +163,7 @@ ListIterator是一个继承于Iterator的接口，它是队列迭代器。专门
 
 ListIterator的API
 
-```
+```java
 // 继承于Iterator的接口
 abstract boolean hasNext()
 abstract E next()
