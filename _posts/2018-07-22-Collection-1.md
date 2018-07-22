@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java集合
+title: Java集合系列-总体介绍
 categories: Java集合系列
 description: Java集合
 keywords: 集合
