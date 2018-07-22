@@ -6,8 +6,6 @@ description: Spring
 keywords: IOC
 ---
 
-Spring 源码学习
-
 学习Spring3的源码。
 
 ## IOC部分
