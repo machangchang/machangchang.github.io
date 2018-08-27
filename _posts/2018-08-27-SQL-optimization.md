@@ -6,9 +6,9 @@ description: SQL
 keywords: Optimization
 ---
 
-SQL优化技巧
+##SQL优化技巧
 
-### 1. 避免在where子句中使用 is null 或 is not null 对字段进行判断。
+### 1. 避免在where子句中使用 is null 或 is not null 对字段进行判断
 
 ```sql
 select id from table where name is null
@@ -20,7 +20,7 @@ select id from table where name is null
 select id from table where name = ''
 ```
 
-### 2. 避免在 where 子句中使用 != 或 <> 操作符。
+### 2. 避免在 where 子句中使用 != 或 <> 操作符
 
 如：`select name from table where id <> 0`
 
@@ -34,7 +34,7 @@ select name from table where id < 0
 
 这里我们为什么没有使用 or 来链接 where 后的两个条件呢？这就是我们下面要说的第3个优化技巧。
 
-### 3. 避免在 where 子句中使用 or来链接条件。
+### 3. 避免在 where 子句中使用 or来链接条件
 
 如：
 
@@ -62,7 +62,7 @@ select name from table where id in(1,2,3,4,5)
  select name from table where id between 1 and 5
 ```
 
-### 5. 意 like 中通配符的使用。
+### 5. 意 like 中通配符的使用
 
 下面的语句会导致全表扫描，尽量少用。如：
 
@@ -82,7 +82,7 @@ select id from table where name like '%jayzai'
  select id from table where name like 'jayzai%'
 ```
 
-### 6. 避免在 where 子句中对字段进行表达式操作。
+### 6. 避免在 where 子句中对字段进行表达式操作
 
 如：
 
@@ -96,7 +96,7 @@ select name from table where id/2 = 100
 select name from table where id = 100*2
 ```
 
-### 7. 避免在 where 子句中对字段进行函数操作。
+### 7. 避免在 where 子句中对字段进行函数操作
 
 如：
 
@@ -121,5 +121,23 @@ select id from table where substring(name,1,8) = 'jayzai'
 ```sql
 select id from table where datefield <= '2014-07-17'
 ```
+
+### 8. 只要一行数据时使用 LIMIT 1
+
+当你查询表的有些时候，你已经知道结果只会有一条结果，但因为你可能需要去fetch游标，或是你也许会去检查返回的记录数。
+
+在这种情况下，加上 LIMIT 1 可以增加性能。这样一样，MySQL数据库引擎会在找到一条数据后停止搜索，而不是继续往后查少下一条符合记录的数据。
+
+```sql
+SELECT 1 FROM user WHERE country = 'China' LIMIT 1
+```
+
+其中 select 1 意思是查询出的值都为1，这样也可以提高查询效率。
+
+### 9. 避免 SELECT *
+
+从数据库里读出越多的数据，那么查询就会变得越慢。并且，如果你的数据库服务器和WEB服务器是两台独立的服务器的话，这还会增加网络传输的负载。
+
+应该养成一个需要什么就取什么的好的习惯。
 
 > 声明：本站采用开放的[知识共享署名-非商业性使用-相同方式共享 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)进行许可。
