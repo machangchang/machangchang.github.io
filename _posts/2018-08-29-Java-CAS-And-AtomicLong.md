@@ -119,8 +119,7 @@ public final long get() {
 ```
 
 2. incrementAndGet()接着将current加1,然后通过CAS函数，将新的值赋值给value。
-3. 
-compareAndSet()的源码如下：
+3. compareAndSet()的源码如下：
 
 ```java
 public final boolean compareAndSet(long expect, long update) {
