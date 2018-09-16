@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Red-Black-Tree
-categories: Java
+categories: 数据结构
 description: Red-Black-Tree
 keywords: Red-Black-Tree
 ---
