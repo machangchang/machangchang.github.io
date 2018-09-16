@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LinkedList
+title: 04-LinkedList
 categories: Java集合系列
 description: Java集合系列
 keywords: Linkedlist
