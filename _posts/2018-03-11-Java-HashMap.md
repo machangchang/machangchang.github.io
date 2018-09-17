@@ -288,4 +288,8 @@ public V get(Object key) {
 
 ## Java HashMap（JDK 1.8）
 
+> 推荐阅读：http://www.cnblogs.com/skywang12345/p/3310835.html
+
 > 参考链接：http://www.cnblogs.com/chenssy/p/3521565.html
+
+> 声明：本站采用开放的[知识共享署名-非商业性使用-相同方式共享 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)进行许可。
