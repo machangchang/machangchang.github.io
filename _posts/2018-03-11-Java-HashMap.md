@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Java HashMap
-categories: Java
-description: Java HashMap
-keywords: Java, HashMap
+title: 08-HashMap
+categories: Java集合系列
+description: Java集合系列
+keywords: HashMap
 ---
 
 ## Java HashMap（JDK 1.6）
