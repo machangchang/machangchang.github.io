@@ -43,7 +43,7 @@ public interface Iterator<E> {
 
 (01) 函数接口不同
 - Enumeration只有2个函数接口。通过Enumeration，我们只能读取集合的数据，而不能对数据进行修改。
-- 
+
 - Iterator只有3个函数接口。Iterator除了能读取集合的数据之外，也能数据进行删除操作。
 
 (02) Iterator支持fail-fast机制，而Enumeration不支持。
