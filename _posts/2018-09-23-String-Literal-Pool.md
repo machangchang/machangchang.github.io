@@ -1,7 +1,7 @@
 ---
 layout: post
-title: (译)Strings, Literally
-categories: Java
+title: 【译】Strings, Literally
+categories: 文档翻译
 description: String
 keywords: String
 ---
