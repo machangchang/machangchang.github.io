@@ -18,7 +18,7 @@ Java内存模型指定了Java虚拟机如何与计算机的内存（RAM）一起
 
 JVM 内部使用 Java 内存模型来将内存划分为线程栈和堆。下面的图从逻辑角度说明了 Java 内存模型。
 
-![](/images/blog/2018-10-11-Java-Memory-Model/Java_Memory_Model_001.jpg)
+![](/images/blog/2018-10-14-Java-Memory-translate/Java_Memory_translate_001.jpg)
 
 每个运行在 Java 虚拟机中的线程都有它独有的线程栈。线程栈包含有关于哪些方法被调用了以到达当前执行点的信息。我将其称为“调用栈”，当线程执行时，其调用栈也会随之改变。
 
@@ -30,7 +30,7 @@ JVM 内部使用 Java 内存模型来将内存划分为线程栈和堆。下面�
 
 下图说明了调用栈和局部变量存储在线程栈中，而对象存储在堆中。
 
-![](/images/blog/2018-10-11-Java-Memory-Model/Java_Memory_Model_002.jpg)
+![](/images/blog/2018-10-14-Java-Memory-translate/Java_Memory_translate_002.jpg)
 
 局部变量可以是基本类型，这种情况下，它完全保存在线程栈上。
 
@@ -46,7 +46,7 @@ JVM 内部使用 Java 内存模型来将内存划分为线程栈和堆。下面�
 
 如下图所示：
 
-![](/images/blog/2018-10-11-Java-Memory-Model/Java_Memory_Model_003.jpg)
+![](/images/blog/2018-10-14-Java-Memory-translate/Java_Memory_translate_003.jpg)
 
 两个线程都有一组局部变量，其中一个局部变量（Local  Variable 2）指向堆上的一个共享对象（Object 3）。两个线程对同一个对象具有不同的引用。它们的引用是局部变量，因此存储在每个线程的线程栈中。但是，这两个不同的引用指向的是堆上的同一个对象。
 
