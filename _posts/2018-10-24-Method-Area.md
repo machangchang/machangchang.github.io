@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java虚拟机：Java内存
+title: Java 方法区
 categories: JVM
 description: Method Area
 keywords: Method Area
