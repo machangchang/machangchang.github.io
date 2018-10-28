@@ -65,6 +65,7 @@ HotSpot虚拟机中，设计了一个OOP-Klass Model。OOP（Ordinary Object Poi
 JVM内存结构，和Java虚拟机的运行时区域有关。 Java内存模型，和Java的并发编程有关。 Java对象模型，和Java对象在虚拟机中的表现形式有关。
 
 > 推荐阅读：http://www.hollischuang.com/archives/2550
+https://my.oschina.net/foodon/blog/354196
 
 > 参考链接：http://www.hollischuang.com/archives/2509
 
