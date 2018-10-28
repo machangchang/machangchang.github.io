@@ -66,6 +66,7 @@ JVM内存结构，和Java虚拟机的运行时区域有关。 Java内存模型�
 
 > 推荐阅读：http://www.hollischuang.com/archives/2550
 https://my.oschina.net/foodon/blog/354196
+http://denverj.iteye.com/blog/1209506
 
 > 参考链接：http://www.hollischuang.com/archives/2509
 
