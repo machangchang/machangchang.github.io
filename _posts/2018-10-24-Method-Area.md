@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java 方法区
+title: 【译】Java 方法区
 categories: JVM
 description: Method Area
 keywords: Method Area
@@ -176,7 +176,8 @@ Java虚拟机总是可以通过查看存储在方法区域中的类数据来确�
 
 main（）的第一条指令通过将对新Lava对象的引用推送到堆栈来完成。 稍后的指令将使用该引用来调用Java代码，该代码将speed变量初始化为其正确的初始值5。 另一条指令将使用该引用来调用引用的Lava对象上的flow（）方法。
 
-> 推荐阅读：https://www.cnblogs.com/kkcheng/archive/2011/02/25/1964521.html
+> 推荐阅读：https://www.zhihu.com/question/38496907/answer/156793201
+https://www.cnblogs.com/kkcheng/archive/2011/02/25/1964521.html
 
 > 参考链接：https://en.wikipedia.org/wiki/Class_(computer_programming)#Class_vs._type
 https://www.artima.com/insidejvm/ed2/jvm5.html
