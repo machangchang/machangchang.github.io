@@ -6,9 +6,13 @@ description: 内部类
 keywords: 内部类
 ---
 
+引用自 Oracle 官方文档：
+
+> Nested classes are divided into two categories: static and non-static. Nested classes that are declared static are called static nested classes. Non-static nested classes are called inner classes.（从字面上看，一个被称为静态嵌套类，一个被称为内部类。从字面的角度解释是这样的：什么是嵌套？嵌套就是我跟你没关系，自己可以完全独立存在，但是我就想借你的壳用一下，来隐藏一下我自己（真TM猥琐）。什么是内部？内部就是我是你的一部分，我了解你，我知道你的全部，没有你就没有我。（所以内部类对象是以外部类对象存在为前提的））There are two special kinds of inner classes: local classes and anonymous classes.
+
 ## 一、内部类基础
 
-在Java中，可以将一个类定义在另一个类里面或者一个方法里面，这样的类称为内部类。广泛意义上的内部类一般来说包括这四种：**成员内部类、局部内部类、匿名内部类和静态内部类**。下面就先来了解一下这四种内部类的用法。
+在Java中，可以将一个类定义在另一个类里面或者一个方法里面，这样的类称为内部类。和 Oracle 官方文档中所描述的类似，广泛意义上的内部类一般来说包括这四种：**成员内部类、局部内部类、匿名内部类和静态内部类**。下面就先来了解一下这四种内部类的用法。
 
 ### 1. 成员内部类
 
