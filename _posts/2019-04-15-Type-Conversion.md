@@ -21,7 +21,7 @@ long ll = i;
 
 具体自动转换如如下图所示。
 
-![](/images/blog/2018-04-15-Type-Conversion/Type_Conversion_001.jpg)
+![](/images/blog/2019-04-15-Type-Conversion/Type_Conversion_001.jpg)
 
 实线表示自动转换时不会造成数据丢失，虚线则可能会出现数据丢失问题。丢失精度是因为不同类型的存储结构不一样，[相关链接](https://blog.csdn.net/koreyoshi326/article/details/71513208)。
 
