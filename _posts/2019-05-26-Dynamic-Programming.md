@@ -52,11 +52,10 @@ keywords: 动态规划
 
 For the iterative solution, we think in bottom-up manner. Before calculating F(i)F(i), we have to compute all minimum counts for amounts up to ii. On each iteration ii of the algorithm F(i)F(i) is computed as min <sub>j=0…n−1</sub>  F(i−c <sub>j </sub>)+1 。
 
-比如：F(3)
-​	
-  
+比如：
+F(3) 
 =min{F(3−c<sub>1</sub> ),F(3−c<sub>2</sub>),F(3−<sub>c3</sub>)}+1
- =min{F(3−1),F(3−2),F(3−3)}+1
+=min{F(3−1),F(3−2),F(3−3)}+1
 =min{F(2),F(1),F(0)}+1
 =min{1,1,0}+1
 =1
