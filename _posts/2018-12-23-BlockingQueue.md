@@ -28,6 +28,7 @@ BlockingQueue是个接口，有如下实现类：
 
 下面使用`ArrayBlockQueue`来实现之前实现过的生产者消/费者模式，代码如下：
 
+```
 package Test;
 
 import java.util.concurrent.ArrayBlockingQueue;
@@ -103,7 +104,7 @@ public class BigPlate {
         }  
     }  
 }  
-
+```
 从结果看，启动10个放鸡蛋线程和10个取鸡蛋线程，前5个放入鸡蛋的线程成功执行，到第6个，发现盘子满了，阻塞住，这时切换到取鸡蛋线程执行，成功实现了生产者/消费者模式。
 
 > 声明：本站采用开放的[知识共享署名-非商业性使用-相同方式共享 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)进行许可。
