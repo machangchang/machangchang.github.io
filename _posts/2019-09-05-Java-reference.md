@@ -44,11 +44,11 @@ public class Main {
 
 接下来的分析涉及到JVM内存中的虚拟机栈，不了解的可以参照 [JVM内存结构](http://machangchang.com//2018/03/24/JVM-1/)。
 
-首先程序运行时，调用mian()方法，此时JVM为main()方法往虚拟机栈中压入一个栈帧，即为当前栈帧，用来存放main()中的局部变量表(包括参数)、操作栈、方法出口等信息，如a和w都是mian()方法中的局部变量，因此可以断定，a和w是在mian方法所在的栈帧中。
+首先程序运行时，调用mian()方法，此时JVM为main()方法往虚拟机栈中压入一个栈帧，即为当前栈帧，用来存放main()中的局部变量表(包括参数)、操作栈、方法出口等信息，如a和w都是mian()方法中的局部变量，因此可以断定，a和w是在mian()方法所在的栈帧中。
 
 ![](/images/blog/2019-09-05-Java-reference/reference_001.jpg)
 
-而当执行到test()方法时，JVM也为其往虚拟机栈中压入一个栈，即为当前栈帧，用来存放test()中的局部变量等信息，因此age和weight是躺着test方法所在的栈帧中，而他们的值是从a和w的值copy了一份副本而得，如图：
+而当执行到test()方法时，JVM也为其往虚拟机栈中压入一个栈，即为当前栈帧，用来存放test()中的局部变量等信息，因此age和weight是放在着test方法所在的栈帧中，而他们的值是从a和w的值copy了一份副本而得，如图：
 
 ![](/images/blog/2019-09-05-Java-reference/reference_002.jpg)
 
