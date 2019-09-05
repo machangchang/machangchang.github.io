@@ -10,6 +10,8 @@ Java 传引用还是传值？
 
 先看一段代码：
 
+### 1. 示例1
+
 ```java
 public class Main {
     public static void test(int age,int weight){
@@ -59,6 +61,8 @@ public class Main {
 age和weight的改动，只是改变了当前栈帧（test方法所在栈帧）里的内容，当方法执行结束之后，这些局部变量都会被销毁，mian方法所在栈帧重新回到栈顶，成为当前栈帧，再次输出a和w时，依然是初始化时的内容。
 
 再举一个例子：
+
+### 2. 示例2
 
 ```java
 public class Person {
@@ -110,6 +114,8 @@ public class Main {
 可以看出，person经过PersonTest()方法的执行之后，内容发生了改变。
 
 接着对上面的例子做下修改：
+
+### 3. 示例3
 
 ```java
 public static void PersonTest(Person person){
