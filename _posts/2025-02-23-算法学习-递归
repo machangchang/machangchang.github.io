@@ -6,3 +6,4 @@
 
 相信很多初学者和我一样，这是一个思维误区，一定要走出来。既然递归是一个反复调用自身的过程，这就说明它每一级的功能都是一样的，因此我们只需要关注一级递归的解决过程即可。
 
+![](https://github.com/machangchang/machangchang.github.io/blob/master/images/blog/hWr1UK.png)
